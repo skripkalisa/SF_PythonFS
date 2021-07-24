@@ -1,10 +1,6 @@
 from random import randint
 import os
 import time
-# import tkinter as tk
-
-# import tkinter as tk
-
 
 HORIZONTAL = 0
 VERTICAL = 1
@@ -20,34 +16,6 @@ legend = '''
  y - номер столбца 
 --------------------
 '''
-# class Application(tk.Frame):
-#     def __init__(self, master=None):
-#         super().__init__(master)
-#         self.master = master
-#         self.pack()
-#         self.say_hi()
-#     self.create_widgets()
-
-# def create_widgets(self):
-#     self.hi_there = tk.Button(self)
-#     self.hi_there["text"] = "Hello World\n(click me)"
-#     self.hi_there["command"] = self.say_hi
-#     self.hi_there.pack(side="top")
-
-#     self.quit = tk.Button(self, text="QUIT", fg="red",
-#                           command=self.master.destroy)
-#     self.quit.pack(side="bottom")
-
-#     def say_hi(self):
-#         self.hi_there = tk.Button(self)
-#         self.hi_there["text"] = "Hello World\n(click me)"
-#         self.hi_there.pack(side="top")
-#         print("hi there, everyone!")
-
-
-# root = tk.Tk()
-# app = Application(master=root)
-# app.mainloop()
 
 
 class Dot:
