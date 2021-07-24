@@ -4,9 +4,9 @@ import time
 
 HORIZONTAL = 0
 VERTICAL = 1
-BOARD_SIZE = 9
-legend = '''
--------------------
+BOARD_SIZE = 8  # must be between 5 and 9!!!
+legend = \
+    '''-------------------
   Приветсвуем вас  
       в игре       
     морской бой    
@@ -14,10 +14,9 @@ legend = '''
  формат ввода: x y 
  x - номер строки  
  y - номер столбца 
---------------------
-'''
+--------------------'''
 
-dashes = "-"*20
+dashes = "  "+"-"*4*BOARD_SIZE + "-"
 
 
 class Dot:
@@ -123,7 +122,7 @@ class Board:
         board_top_str = ""
         for b_top in board_top:
             board_top_str += b_top
-        res += "  |" + board_top_str
+        res += "  |" + board_top_str + "\n" + dashes
         # res += "  | 1 | 2 | 3 | 4 | 5 | 6 |"
         for i, row in enumerate(self.field):
             res += f"\n{i+1} | " + " | ".join(row) + " |"
@@ -257,18 +256,20 @@ class Game:
             os.system('clear')
             # os.system('cls') # для Windows
             print(legend)
+            print("\nДоска пользователя:")
             print(dashes)
-            print("Доска пользователя:")
             print(self.us.board)
-            print("-"*20)
-            print("Доска компьютера:")
+            print(dashes)
+            print("\nДоска компьютера:")
+            print(dashes)
             print(self.ai.board)
+            print(dashes)
+            print("")
             if num % 2 == 0:
-                print(dashes)
                 print("Ходит пользователь!")
                 repeat = self.us.move()
             else:
-                print(dashes)
+                # print()
                 print("Ходит компьютер!")
                 repeat = self.ai.move()
             if repeat:
