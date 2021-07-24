@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 venv/
 <<<<<<< Updated upstream
 .vscode/
 =======
 >>>>>>> Stashed changes
+=======
+.vscode/
+venv/
+>>>>>>> OOP
 .git/
