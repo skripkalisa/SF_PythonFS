@@ -1,0 +1,6 @@
+venv/
+<<<<<<< Updated upstream
+.vscode/
+=======
+>>>>>>> Stashed changes
+.git/
